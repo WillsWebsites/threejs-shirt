@@ -12,19 +12,16 @@ const Home = () => {
       {snap.intro && (
         <motion.section className="home" {...slideAnimation('left')}>
           <motion.header {...slideAnimation('down')}>
-            <img src="../gold-logo.svg" alt="logo" className="w-8 h-8 object-contain" />
+            <img src="../gold-logo.svg" alt="logo" className="w-full max-w-[200px] h-auto object-contain" />
           </motion.header>
 
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className="head-text">
-                LET'S <br className="xl:block hidden" />
-                DO IT.
-              </h1>
+              <h1 className="head-text">BOSSO.</h1>
             </motion.div>
             <motion.div className="flex flex-col gap-5" {...headContentAnimation}>
               <p className="max-w-md font-normal text-gray-600 text-base">
-                Create this <strong>dope shit</strong>.
+                Create this <strong>dope shit</strong> if you think you can handle it.
               </p>
               <Button
                 type="filled"

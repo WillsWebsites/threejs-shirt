@@ -14,7 +14,7 @@ const Customizer = () => {
   const [generatingImg, setGeneratingImg] = useState(false)
   const [activeEditorTab, setActiveEditorTab] = useState('')
   const [activeFilterTab, setActiveFilterTab] = useState('')
-  ß
+
   const generateTabContent = () => {}
 
   useEffect(() => {}, [])
