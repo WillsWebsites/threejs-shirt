@@ -20,7 +20,7 @@ const AiPicker: FC<AiPickerProps> = ({ prompt, setPrompt, generatingImg, handleS
       />
       <div className="flex flex-wrap gap-3">
         {generatingImg ? (
-          <CustomButton type="outline" title="asking ai" customStyles="text-sx" />
+          <CustomButton type="outline" title="asking ai..." customStyles="text-sx" />
         ) : (
           <>
             <CustomButton
@@ -32,7 +32,7 @@ const AiPicker: FC<AiPickerProps> = ({ prompt, setPrompt, generatingImg, handleS
             <CustomButton
               type="filled"
               title="AI Full"
-              handleClick={() => handleSubmit('logo')}
+              handleClick={() => handleSubmit('full')}
               customStyles="text-xs"
             />
           </>

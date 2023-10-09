@@ -30,7 +30,13 @@ const Shirt = () => {
       >
         {snap.isFullTexture && <Decal position={[0, 0, 0]} rotation={[0, 0, 0]} scale={1} map={fullTexture} />}
         {snap.isLogoTexture && (
-          <Decal position={[0, 0.14, 0.15]} rotation={[0, 0, 0]} scale={0.2} map={logoTexture} depthTest={false} />
+          <Decal
+            position={[0.0, 0.14, 0.1]}
+            rotation={[0, 0, 0]}
+            scale={0.2}
+            map={logoTexture}
+            depthTest={false}
+          />
         )}
       </mesh>
     </group>

@@ -15,6 +15,7 @@ const Customizer = () => {
   const [generatingImg, setGeneratingImg] = useState(false)
   const [activeEditorTab, setActiveEditorTab] = useState('')
   const [activeFilterTab, setActiveFilterTab] = useState<any>('')
+  // const [imgSrc, setImgSrc] = useState('')
 
   const generateTabContent = () => {
     switch (activeEditorTab) {
@@ -41,7 +42,7 @@ const Customizer = () => {
 
     try {
       setGeneratingImg(true)
-      const response = await fetch('localhost:8080/api/v1/dalle', {
+      const response = await fetch('http://localhost:8080/api/v1/dalle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -49,7 +50,9 @@ const Customizer = () => {
         body: await JSON.stringify({ prompt })
       })
 
-      const data = response.json()
+      const data = await response.json()
+      handleDecals(type, `data:image/png;base64,${data.photo}`)
+      // setImgSrc(`data:image/png;base64,${data.photo}`)
     } catch (error) {
       alert(error)
     } finally {
@@ -67,8 +70,9 @@ const Customizer = () => {
         state.isFullTexture = !activeFilterTab[tabName]
         break
       default:
-        state.isFullTexture = false
         state.isLogoTexture = true
+        state.isFullTexture = false
+        break
     }
 
     setActiveFilterTab((prevState: any) => {
@@ -119,6 +123,7 @@ const Customizer = () => {
               handleClick={() => (state.intro = true)}
               customStyles="w-fit px-4 py-2.5 font-bold text-sm"
             />
+            {/* <img src={imgSrc} /> */}
           </motion.div>
 
           <motion.div className="filtertabs-container" {...slideAnimation('up')}>
