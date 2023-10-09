@@ -1,0 +1,21 @@
+{
+  "cSpell.words": [
+    "aipicker",
+    "anisotrapy",
+    "BOSSO",
+    "colorpicker",
+    "Customizer",
+    "drei",
+    "editortabs",
+    "filepicker",
+    "filtertabs",
+    "glassmorphism",
+    "GLTF",
+    "maath",
+    "threejs",
+    "valtio"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.sortImports": true
+  }
+}
