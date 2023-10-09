@@ -11,7 +11,7 @@ const Backdrop = () => {
       frames={60}
       alphaTest={1}
       scale={2}
-      opacity={0.8}
+      opacity={0.75}
       rotation={[Math.PI / 2, 0, 0]}
       position={[0, 0, -0.14]}
     >

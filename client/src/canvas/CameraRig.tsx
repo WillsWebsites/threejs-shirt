@@ -30,7 +30,7 @@ const CameraRig: FC<CameraRigProps> = ({ children }) => {
     easing.damp3(state.camera.position, targetPosition, 0.25, delta)
 
     if (camera && camera?.current) {
-      easing.dampE(camera.current.rotation, [state.pointer.x / 5, -state.pointer.y / 5, 0], 0.25)
+      easing.dampE(camera.current.rotation, [state.pointer.x / 4, -state.pointer.y / 3, 0], 0.25)
     }
   })
 
