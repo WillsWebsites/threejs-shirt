@@ -21,7 +21,7 @@ const Home = () => {
             </motion.div>
             <motion.div className="flex flex-col gap-5" {...headContentAnimation}>
               <p className="max-w-md font-normal text-gray-600 text-base">
-                Create this <strong>dope shit</strong> if you think you can handle it.
+                Modern design customization at your fingertips. Powered by AI.
               </p>
               <Button
                 type="filled"

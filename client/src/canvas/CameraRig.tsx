@@ -22,15 +22,16 @@ const CameraRig: FC<CameraRigProps> = ({ children }) => {
     if (snap.intro) {
       if (isBreakpoint) targetPosition = [0, 0, 2]
       if (isMobile) targetPosition = [0, 0.2, 2.5]
+      if (camera && camera?.current) {
+        easing.dampE(camera.current.rotation, [state.pointer.x / 4, -state.pointer.y / 3, 0], 0.25)
+      }
+      easing.damp3(state.camera.position, targetPosition, 0.25, delta)
     } else {
       if (isMobile) targetPosition = [0, 0, 2.5]
       else targetPosition = [0, 0, 2]
-    }
-
-    easing.damp3(state.camera.position, targetPosition, 0.25, delta)
-
-    if (camera && camera?.current) {
-      easing.dampE(camera.current.rotation, [state.pointer.x / 4, -state.pointer.y / 3, 0], 0.25)
+      // if (camera && camera?.current) {
+      //   easing.dampE(camera.current.rotation, [0, 0, 0], 0.25)
+      // }
     }
   })
 

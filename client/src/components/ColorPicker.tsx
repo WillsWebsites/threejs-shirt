@@ -10,7 +10,12 @@ const ColorPicker = () => {
   }
   return (
     <div className="absolute left-full ml-3">
-      <SketchPicker color={snap.color} disableAlpha onChange={handleColorChange} />
+      <SketchPicker
+        color={snap.color}
+        disableAlpha
+        onChange={handleColorChange}
+        presetColors={['#52555a', '#7e8b9a', '#7e705c', '#6b806f', '#739e99', '#615868', '#685861', '#6c4042']}
+      />
       <div className="py-2 px-3 bg-white">Hex color: {state.color}</div>
     </div>
   )
