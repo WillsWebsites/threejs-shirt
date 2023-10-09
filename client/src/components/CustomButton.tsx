@@ -1,13 +1,13 @@
 import { FC } from 'react'
 import { useSnapshot } from 'valtio'
-import state from '../store'
 import { getContrastingColor } from '../config/helpers'
+import state from '../store'
 
 interface CustomButtonProps {
   type: string
   title: string
   customStyles?: string
-  handleClick: () => void
+  handleClick?: () => void
 }
 
 const CustomButton: FC<CustomButtonProps> = ({ type, title, customStyles, handleClick }) => {

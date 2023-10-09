@@ -36,10 +36,12 @@ const Customizer = () => {
     }
   }
 
-  const handleSubmit = async type => {
+  const handleSubmit = async (type: any) => {
     if (!prompt) return alert('please enter a prompt')
 
     try {
+      setGeneratingImg(true)
+      const response = await fetch(backendUrl)
     } catch (error) {
       alert(error)
     } finally {
